@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalimantan Timur</title>
+        <link rel="stylesheet" href="assets/style/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <header class="fixed">
+            <h1 class="title">Kalimantan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#wisata">Wisata</a></li>
+                    <li><a href="#souvenir">Souvenir</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <div id="content" class="artikel">
+                <article class="box" id="tentang">
+                    <h2>Tentang</h2>
+                    <img src="assets/img/2.jpg" class="img-content" />
+                    <p class="deskripsi">
+                        Kalimantan atau biasa disebut Borneo oleh masyarakat internasional. Kalimantan adalah pulau terbesar ketiga di dunia, terletak di utara Pulau Jawa dan barat Pulau Sulawesi. Pulau Borneo terbagi menjadi Indonesia, Malaysia, dan Brunei. Di Kalimantan
+                        terdapat banyak suku, adat istiadat, keragaman budaya, dan budaya khas daerah Kalimantan. Tidak hanya itu, Kalimantan juga dikenal dengan pulau-pulau indah yang ada di dalamnya. Mari mengenal Kalimantan lebih dalam!
+                    </p>
+                </article>
+                <article class="box" id="wisata">
+                    <h2>Wisata</h2>
+                    <img src="assets/img/1.jpg" class="img-content" />
+                    <p class="deskripsi">
+                        Kalimantan telah menjadi destinasi wisata yang sangat populer beberapa tahun terkahir. Ada berbagai jenis liburan yang dapat dijumpai di kalimantan, mulai dari petualangan, traking hutan, pantai, safari orang utan, menyelam dan lain sebagainya. Banyak
+                        pengunjung dari berbagai daerah mulai dari dalam negeri maupun luar negeri menghabiskan liburan di pulau Kalimantan, baik untuk menghabiskan bulan madu, libur tahun baru, paskah, imlek dan lain sebagainya.
+                    </p>
+                </article>
+                <article class="box" id="souvenir">
+                    <h2>Souvenir</h2>
+                    <img src="assets/img/souvenir.jpg" class="img-content" />
+                    <p class="deskripsi">
+                        Kamu dapat menemukan berbagai macam oleh oleh yang dapat dibawa setelah berkunjung ke pulau Kalimantan. Oleh oleh yang tersedia dari Kalimantan biasanya berbahan dasar alam seperti batu batuan ataupun tumbuhan yang diolah menjadi perhiasan oleh penduduk
+                        asli kalimantan. Selain itu, oleh oleh kuliner dari Kalimantan juga sangat beragam karena terdiri dari banyak kalangan
+                    </p>
+                </article>
+                <button class="like" onclick="likeCounter()" type="button">LIKE</button>
+                <div id="jumlah"></div>
+                <p>Tekan tombol untuk memberi like!</p>
+            </div>
+            <aside class="pengembang box">
+                <h2>Pengembang</h2>
+                <p>Nama : Abdillah Nur Ridho</p>
+                <p>email : abdillahnurr12@gmail.com</p>
+                <p>Instansi : Universitas Mulawarman</p>
+                <p>Kota Samarinda, Kalimantan Timur</p>
+                <img src="assets/img/Profil.jpg" class="profil img-content" />
+            </aside>
+        </main>
+        <footer>
+            <p class="copy">Belajar Dasar Pemrograman Web &#169; 2022, Dicoding Academy</p>
+        </footer>
+        <script>
+            function likeCounter() {
+                if (typeof Storage !== "undefined") {
+                    if (localStorage.clickcount) {
+                        localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                    } else {
+                        localStorage.clickcount = 1;
+                    }
+                    document.getElementById("jumlah").innerHTML = "Jumlah Like Saat ini : " + localStorage.clickcount + " like(s).";
+                } else {
+                    document.getElementById("jumlah").innerHTML = "Maaf Browser anda tidak support";
+                }
+            }
+        </script>
+    </body>
+</html>
